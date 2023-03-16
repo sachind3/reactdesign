@@ -1,0 +1,24 @@
+@import "./scss/variables";
+@import "./scss/base";
+@import "./scss/components";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+section {
+  padding: 1rem 0;
+}
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.list {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+h4 {
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,57 @@
+.btn {
+  padding: 0.625rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 100%;
+  font-weight: 500;
+  border-radius: $border__radius;
+  background-color: $primary;
+  border: 1px solid transparent;
+  color: $white;
+  transition: all 0.3s ease-in-out;
+}
+@each $key, $val in $theme-colors {
+  .btn-#{$key} {
+    border: 1px solid transparent;
+    color: $white;
+    background-color: $val;
+    &:hover {
+      background-color: darken($val, 10%);
+    }
+    &:active {
+      background-color: darken($val, 15%);
+    }
+    &:disabled {
+      background-color: lighten($val, 20%);
+      pointer-events: none;
+    }
+  }
+  .btn-outline-#{$key} {
+    border-radius: $border__radius;
+    border: 1px solid transparent;
+    background-color: $white;
+    color: $val;
+    border-color: $val;
+    &:hover {
+      background-color: $val;
+      color: $white;
+    }
+    &:active {
+      background-color: darken($val, 15%);
+    }
+    &:disabled {
+      color: lighten($val, 20%);
+      border-color: lighten($val, 20%);
+      pointer-events: none;
+    }
+  }
+}
+.btn-sm {
+  padding: 0.5rem 0.625rem;
+  font-size: 0.75rem;
+}
+.btn-lg {
+  padding: 0.75rem 1rem;
+  font-size: 1.125rem;
+}
